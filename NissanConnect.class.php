@@ -305,6 +305,9 @@ class NissanConnect {
             $result->ACDurationPluggedSec = FALSE;
         }
 
+        //Indoor Temperature (Leaf Gen2)
+        $result->IndoorTemp = $response->temperatureRecords->inc_temp;
+        
         return $result;
     }
 
